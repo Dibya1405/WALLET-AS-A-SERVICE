@@ -1,0 +1,14 @@
+package: WALLET-AS-A-SERVICE
+import:
+- package: github.com/go-sql-driver/mysql
+  version: v1.6.0
+- package: gorm.io/gorm
+  version: v1.23.8
+- package: github.com/gorilla/mux
+  version: v1.8.0
+- package: gorm.io/driver/mysql
+  version: v1.3.6
+- package: github.com/jinzhu/inflection
+  version: v1.0.0
+- package: github.com/jinzhu/now
+  version: v1.1.5

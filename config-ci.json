@@ -1,0 +1,7 @@
+[
+  {
+    "mysql": {
+          "dsn": "root:iamgroot@tcp(127.0.0.1:3306)/Wallet_As_A_Service?parseTime=true&charset=utf8mb4"
+        }
+}
+]
