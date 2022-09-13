@@ -1,21 +1,31 @@
-hash: aeadda4469cee242cb0f527b8c26deb0fe18b182fe928b9a0c5ac1c850835447
-updated: 2022-09-06T18:42:18.496595+05:30
+hash: 332a32fbc8795c723723db6ce9d055de667e4993af77691bfe42d17510a4563e
+updated: 2022-09-07T16:43:32.194603+05:30
 imports:
+- name: github.com/go-playground/validator
+  version: 9e2ea4038020b5c7e3802a21cfa4e3afcfdcd276
+  subpackages:
+  - v10
 - name: github.com/go-sql-driver/mysql
   version: bcc459a906419e2890a50fc2c99ea6dd927a88f2
+- name: github.com/google/uuid
+  version: 44b5fee7c49cf3bcdf723f106b36d56ef13ccc88
 - name: github.com/gorilla/mux
   version: 98cb6bf42e086f6af920b965c38cacc07402d51b
 - name: github.com/jinzhu/inflection
   version: f5c5f50e6090ae76a29240b61ae2a90dd810112e
 - name: github.com/jinzhu/now
   version: f067b166b35a996b9ff5a0f610225e1458f23adc
+- name: github.com/satori/go.uuid
+  version: f58768cc1a7a7e77a3bd49e98cdd21419399b6a3
 - name: gorm.io/driver/mysql
   version: 14d485ed244c2336042cd38608757225248d839f
 - name: gorm.io/gorm
   version: 9fd73ae4f1f638e4c49ae4e6fab8beb9863adabc
   subpackages:
+  - callbacks
   - clause
   - logger
+  - migrator
   - schema
   - utils
 testImports: []

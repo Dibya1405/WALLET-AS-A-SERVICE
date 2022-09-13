@@ -16,7 +16,7 @@ type Mysql struct {
 
 var Dbs []Db
 
-func GetAllConfiuration() string {
+func GetAllConfiguration() string {
 	file, err := ioutil.ReadFile("./config-ci.json")
 	utils.CheckError(err)
 	json.Unmarshal([]byte(file), &Dbs)

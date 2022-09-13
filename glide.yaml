@@ -12,3 +12,11 @@ import:
   version: v1.0.0
 - package: github.com/jinzhu/now
   version: v1.1.5
+- package: github.com/satori/go.uuid
+  version: v1.2.0
+- package: github.com/google/uuid
+  version: v1.3.0
+- package: github.com/go-playground/validator
+  version: v10.11.0
+  subpackages:
+  - v10
