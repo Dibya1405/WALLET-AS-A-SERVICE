@@ -2,13 +2,20 @@ package main
 
 import (
 	"WALLET-AS-A-SERVICE/datastore"
+	"WALLET-AS-A-SERVICE/logger"
 	"WALLET-AS-A-SERVICE/server"
-	"fmt"
 )
 
 func main() {
-	fmt.Println("Welcome to the project : WALLET-AS-A-SERVICE")
+	// If you want to log in a particular file ---
+
+	//file, err := os.Create("./file.log")
+	//utils.CheckError(err)
+	//defer file.Close()
+	//log.SetOutput(file)
+
+	logger.GetMyLogger().Info("Welcome to the project : WALLET-AS-A-SERVICE")
 	datastore.InitializeDb()
 	server.StartServer()
-	fmt.Println("Listening port at 4000...")
+	logger.GetMyLogger().Warn("Listening port at 4000...")
 }

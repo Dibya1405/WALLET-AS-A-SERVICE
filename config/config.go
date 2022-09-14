@@ -1,6 +1,7 @@
 package config
 
 import (
+	"WALLET-AS-A-SERVICE/logger"
 	"WALLET-AS-A-SERVICE/utils"
 	"encoding/json"
 	"io/ioutil"
@@ -14,12 +15,13 @@ type Mysql struct {
 	Dsn string `json:"dsn"`
 }
 
-var Dbs []Db
+var DbConfig Db
 
 func GetAllConfiguration() string {
 	file, err := ioutil.ReadFile("./config-ci.json")
 	utils.CheckError(err)
-	json.Unmarshal([]byte(file), &Dbs)
-	RequiredDsn := Dbs[0].Mysql.Dsn
+	json.Unmarshal(file, &DbConfig)
+	RequiredDsn := DbConfig.Mysql.Dsn
+	logger.GetMyLogger().Info(RequiredDsn)
 	return RequiredDsn
 }

@@ -1,7 +1,5 @@
-[
-  {
-    "mysql": {
-          "dsn": "root:iamgroot@tcp(127.0.0.1:3306)/waas?parseTime=true&charset=utf8mb4"
-        }
+{
+  "mysql": {
+        "dsn": "root:iamgroot@tcp(127.0.0.1:3306)/waas?parseTime=true&charset=utf8mb4"
+      }
 }
-]

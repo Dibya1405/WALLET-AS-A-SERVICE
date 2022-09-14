@@ -3,6 +3,7 @@ package datastore
 import (
 	"WALLET-AS-A-SERVICE/config"
 	"WALLET-AS-A-SERVICE/dao/entity"
+	"WALLET-AS-A-SERVICE/logger"
 	"WALLET-AS-A-SERVICE/utils"
 
 	"gorm.io/gorm"
@@ -19,6 +20,7 @@ func InitializeDb() {
 		DSN:               Dsn, // data source name
 		DefaultStringSize: 256}), &gorm.Config{})
 	utils.CheckError(err)
+	logger.GetMyLogger().Warn("Db connection established...")
 	DB.AutoMigrate(&entity.User{}, &entity.Wallet{}, &entity.Transaction{})
 }
 

@@ -1,7 +1,7 @@
 package server
 
 import (
-	"fmt"
+	"WALLET-AS-A-SERVICE/logger"
 	"log"
 	"net/http"
 
@@ -14,5 +14,5 @@ func StartServer() {
 	r := mux.NewRouter()
 	router.InitializeRouter(r)
 	log.Fatal(http.ListenAndServe(":4000", r))
-	fmt.Println("Server started successfully")
+	logger.GetMyLogger().Warn("Server started successfully")
 }
